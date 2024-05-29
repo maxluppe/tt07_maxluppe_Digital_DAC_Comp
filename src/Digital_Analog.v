@@ -1,16 +1,16 @@
 module Digital_DAC ( D, Vdac );
 
 	input [4:0] D;
-	output Vdac;
+	output Vdac;	//QUIT_ON_SYNTH_CHECKS
 	
-	(* keep = "true" *) sky130_fd_sc_hd__nand2_1 ix1 (.Y (Vdac), .A (Vdac), .B (D[0])) ;
-	(* keep = "true" *) sky130_fd_sc_hd__nand2_2 ix2 (.Y (Vdac), .A (Vdac), .B (D[1])) ;
-	(* keep = "true" *) sky130_fd_sc_hd__nand2_4 ix4 (.Y (Vdac), .A (Vdac), .B (D[2])) ;
-	(* keep = "true" *) sky130_fd_sc_hd__nand2_8 ix8 (.Y (Vdac), .A (Vdac), .B (D[3])) ;
-	(* keep = "true" *) sky130_fd_sc_hd__nand2_8 ix16a (.Y (Vdac), .A (Vdac), .B (D[4])) ;
-	(* keep = "true" *) sky130_fd_sc_hd__nand2_8 ix16b (.Y (Vdac), .A (Vdac), .B (D[4])) ;
+	sky130_fd_sc_hd__nand2_1 ix1 (.Y (Vdac), .A (Vdac), .B (D[0])) ; //(* keep = "true" *)
+	sky130_fd_sc_hd__nand2_2 ix2 (.Y (Vdac), .A (Vdac), .B (D[1])) ;
+	sky130_fd_sc_hd__nand2_4 ix4 (.Y (Vdac), .A (Vdac), .B (D[2])) ;
+	sky130_fd_sc_hd__nand2_8 ix8 (.Y (Vdac), .A (Vdac), .B (D[3])) ;
+	sky130_fd_sc_hd__nand2_8 ix16a (.Y (Vdac), .A (Vdac), .B (D[4])) ;
+	sky130_fd_sc_hd__nand2_8 ix16b (.Y (Vdac), .A (Vdac), .B (D[4])) ;
 
-	(* keep = "true" *) sky130_fd_sc_hd__nand2_1 ix0 (.Y (Vdac), .A (1'b1), .B (Vdac)) ;
+	sky130_fd_sc_hd__nand2_1 ix0 (.Y (Vdac), .A (1'b1), .B (Vdac)) ;
 
 endmodule
 
