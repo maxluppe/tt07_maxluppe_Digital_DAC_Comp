@@ -10,6 +10,9 @@
 
 # Here are some of the variables you may want to change:
 
+# Removing multiple conflicts warnings
+set ::env(QUIT_ON_SYNTH_CHECKS) 0
+
 # PL_TARGET_DENSITY - You can increase this if Global Placement fails with error GPL-0302.
 # Users have reported that values up to 0.8 worked well for them.
 set ::env(PL_TARGET_DENSITY) 0.6
