@@ -132,17 +132,17 @@ module Digital_Analog ( CLK_CNT0, CLK_CNT1, CLK_COMP, RSTN, EN0, EN1, SEL, VinP,
 		/* verilator lint_on PINCONNECTEMPTY */
 	);
 
-	Digital_DAC DDAC0 (
+	(* keep = "true" *) Digital_DAC DDAC0 (
 		.D(D0),
 		.Vdac(VinP)
 	);
 
-	Digital_DAC DDAC1 (
+	(* keep = "true" *) Digital_DAC DDAC1 (
 		.D(D1),
 		.Vdac(VinM)
 	);
 	
-	NAND_Comparator_NAND02 Comp1a (
+	(* keep = "true" *) NAND_Comparator_NAND02 Comp1a (
 		.CLK(CLK_COMP),
 		.VinP(VinP),
 		.VinM(VinM),
@@ -150,7 +150,7 @@ module Digital_Analog ( CLK_CNT0, CLK_CNT1, CLK_COMP, RSTN, EN0, EN1, SEL, VinP,
 		.OutM(VoutM_NAND)
 	) ;
 	
-	NAND_Comparator_AO22 Comp2 (
+	(* keep = "true" *) NAND_Comparator_AO22 Comp2 (
 		.CLK(CLK_COMP),
 		.VinP(VinP),
 		.VinM(VinM),
@@ -158,7 +158,7 @@ module Digital_Analog ( CLK_CNT0, CLK_CNT1, CLK_COMP, RSTN, EN0, EN1, SEL, VinP,
 		.OutM(VoutM_AO22)
 	) ;
 	
-	NAND_Comparator_MUX21_NI Comp5 (
+	(* keep = "true" *) NAND_Comparator_MUX21_NI Comp5 (
 		.CLK(CLK_COMP),
 		.VinP(VinP),
 		.VinM(VinM),
