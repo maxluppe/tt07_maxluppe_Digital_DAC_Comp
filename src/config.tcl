@@ -26,7 +26,7 @@ set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.1
 set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.05
 
 # RUN_LINTER, LINTER_INCLUDE_PDK_MODELS - Disabling the linter is not recommended!
-set ::env(RUN_LINTER) 0
+set ::env(RUN_LINTER) 1
 set ::env(LINTER_INCLUDE_PDK_MODELS) 1
 
 # If you need a custom clock configuration, read the following documentation first:
