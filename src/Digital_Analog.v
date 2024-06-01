@@ -22,10 +22,10 @@ module NAND_Comparator_NAND02 ( CLK, VinP, VinM, OutP, OutM ) ;
     output OutP ;
     output OutM ;
 
-    wire C, D, A, B, E, F, CLKn, CLKb;
+    (* keep = "true" *) wire C, D, A, B, E, F, CLKn, CLKb;
 
-	sky130_fd_sc_hd__clkbuf_1 ix01 (.X(CLKb), .A(CLK));
-	sky130_fd_sc_hd__clkinv_1 ix02 (.Y(CLKn), .A(CLK));
+    sky130_fd_sc_hd__clkbuf_1 ix01 (.X(CLKb), .A(CLK));
+    sky130_fd_sc_hd__clkinv_1 ix02 (.Y(CLKn), .A(CLK));
 
     sky130_fd_sc_hd__nand2_1 ix25 (.Y (OutM), .A (D), .B (OutP)) ;
     sky130_fd_sc_hd__nand2_1 ix31 (.Y (OutP), .A (C), .B (OutM)) ;
@@ -47,7 +47,7 @@ module NAND_Comparator_AO22 ( CLK, VinP, VinM, OutP, OutM ) ;
     output OutP ;
     output OutM ;
 
-    wire C, D, CLKn, CLKb;
+	(* keep = "true" *) wire C, D, CLKn, CLKb;
 
 	sky130_fd_sc_hd__clkbuf_1 ix01 (.X(CLKb), .A(CLK));
 	sky130_fd_sc_hd__clkinv_1 ix02 (.Y(CLKn), .A(CLK));
@@ -68,7 +68,7 @@ module NAND_Comparator_MUX21_NI ( CLK, VinP, VinM, OutP, OutM ) ;
     output OutP ;
     output OutM ;
 
-    wire C, D, CLKb;
+	(* keep = "true" *) wire C, D, CLKb;
 
 	sky130_fd_sc_hd__clkbuf_1 ix01 (.X(CLKb), .A(CLK));
 
@@ -110,9 +110,9 @@ module Digital_Analog ( CLK_CNT0, CLK_CNT1, CLK_COMP, RSTN, EN0, EN1, SEL, VinP,
 	output VoutP_AO22, VoutM_AO22;
 	output VoutP_MX21, VoutM_MX21;
 	
-	wire [4:0] D0;
-	wire [4:0] D1;
-	wire COUT0;
+	(* keep = "true" *) wire [4:0] D0;
+	(* keep = "true" *) wire [4:0] D1;
+	(* keep = "true" *) wire COUT0;
 	
 	counter #(5) u0 (
 		.CLK(CLK_CNT0),
