@@ -42,6 +42,9 @@ set ::env(RSZ_DONT_TOUCH_RX) "_notouch_"
 # Insert buffer cells into the design for directly connected wires
 set ::env(SYNTH_BUFFER_DIRECT_WIRES) 0
 
+# Enable clock tree synthesis 
+set ::env(RUN_CTS) 0
+
 # Configuration docs: https://openlane.readthedocs.io/en/latest/reference/configuration.html
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
