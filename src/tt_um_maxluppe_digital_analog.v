@@ -25,7 +25,7 @@ module tt_um_maxluppe_digital_analog (
   // List all unused inputs to prevent warnings
     wire _unused = &{ena, ui_in[5], ui_in[6], ui_in[7], 1'b0};
 
-  Digital_Analog u0 (
+  (* keep = "true" *)  Digital_Analog u0 (
       .CLK_CNT0(ui_in[0]),
       .CLK_CNT1(ui_in[1]),
       .CLK_COMP(clk),
