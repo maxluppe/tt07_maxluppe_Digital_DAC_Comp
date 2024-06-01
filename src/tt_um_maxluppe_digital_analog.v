@@ -23,16 +23,16 @@ module tt_um_maxluppe_digital_analog (
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
-    wire _unused = &{ena, ui_in[5], ui_in[6], ui_in[7], 1'b0};
+    wire _unused = &{ena, clk, ui_in[6], ui_in[7], 1'b0};
 
   (* keep_hierarchy = "yes" *) Digital_Analog u0 (
       .CLK_CNT0(ui_in[0]),
       .CLK_CNT1(ui_in[1]),
-      .CLK_COMP(clk),
+      .CLK_COMP(ui_in[2]),//clk),
       .RSTN(rst_n),
-      .EN0(ui_in[2]),
-      .EN1(ui_in[3]),
-      .SEL(ui_in[4]),
+      .EN0(ui_in[3]),
+      .EN1(ui_in[4]),
+      .SEL(ui_in[5]),
       .VinP(uo_out[0]),
       .VinM(uo_out[1]),
       .VoutP_NAND(uo_out[2]),
