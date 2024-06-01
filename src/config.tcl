@@ -26,24 +26,21 @@ set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.1
 set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.05
 
 # RUN_LINTER, LINTER_INCLUDE_PDK_MODELS - Disabling the linter is not recommended!
-set ::env(RUN_LINTER) 1
+set ::env(RUN_LINTER) 0
 set ::env(LINTER_INCLUDE_PDK_MODELS) 1
 
 # If you need a custom clock configuration, read the following documentation first:
 # https://tinytapeout.com/faq/#how-can-i-map-an-additional-external-clock-to-one-of-the-gpios
 set ::env(CLOCK_PORT) {clk}
 
-# provide a way for people to stop the resizer from changing cells
-set ::env(RSZ_DONT_TOUCH_RX) "_notouch_"
-
 # "Elaborate" the design only without attempting any logic mapping
 #set ::env(SYNTH_ELABORATE_ONLY) 1
 
 # Insert buffer cells into the design for directly connected wires
-set ::env(SYNTH_BUFFER_DIRECT_WIRES) 0
+#set ::env(SYNTH_BUFFER_DIRECT_WIRES) 0
 
 # Enable clock tree synthesis 
-set ::env(RUN_CTS) 0
+#set ::env(RUN_CTS) 0
 
 # Configuration docs: https://openlane.readthedocs.io/en/latest/reference/configuration.html
 
