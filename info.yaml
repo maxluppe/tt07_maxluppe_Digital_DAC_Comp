@@ -23,10 +23,10 @@ pinout:
   # Inputs
   ui[0]: "First Counter Clock"
   ui[1]: "Second Counter Clock"
-  ui[2]: "First Counter Enable"
-  ui[3]: "Second Counter Enable"
-  ui[4]: "Counter Mode Selection"
-  ui[5]: ""
+  ui[2]: "Comparators Clock"
+  ui[3]: "First Counter Enable"
+  ui[4]: "Second Counter Enable"
+  ui[5]: "Counter Mode Selection"
   ui[6]: ""
   ui[7]: ""
 
