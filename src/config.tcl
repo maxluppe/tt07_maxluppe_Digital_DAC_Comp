@@ -33,6 +33,9 @@ set ::env(LINTER_INCLUDE_PDK_MODELS) 1
 # https://tinytapeout.com/faq/#how-can-i-map-an-additional-external-clock-to-one-of-the-gpios
 set ::env(CLOCK_PORT) {clk}
 
+# provide a way for people to stop the resizer from changing cells
+set ::env(RSZ_DONT_TOUCH_RX) "_notouch_"
+
 # Configuration docs: https://openlane.readthedocs.io/en/latest/reference/configuration.html
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
