@@ -36,6 +36,12 @@ set ::env(CLOCK_PORT) {clk}
 # provide a way for people to stop the resizer from changing cells
 set ::env(RSZ_DONT_TOUCH_RX) "_notouch_"
 
+# "Elaborate" the design only without attempting any logic mapping
+set ::env(SYNTH_ELABORATE_ONLY) 1
+
+# Insert buffer cells into the design for directly connected wires
+#set ::env(SYNTH_BUFFER_DIRECT_WIRES) 0
+
 # Configuration docs: https://openlane.readthedocs.io/en/latest/reference/configuration.html
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
